@@ -5,6 +5,8 @@ import { Download, ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function AboutSection() {
+  const cvPath = "/Anushk_Prakash_CV.pdf";
+
   const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -65,11 +67,15 @@ export default function AboutSection() {
       </motion.div>
 
       <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-6">
-        <button className="relative flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors group overflow-hidden">
+        <a
+          href={cvPath}
+          download
+          className="relative flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors group overflow-hidden"
+        >
           <div className="absolute inset-0 bg-accent/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           <span className="relative z-10">Download CV</span>
           <Download className="w-4 h-4 relative z-10 group-hover:-translate-y-1 group-hover:text-accent transition-all" />
-        </button>
+        </a>
 
         <div className="flex items-center gap-4">
           {[

@@ -7,6 +7,7 @@ import { Mail, Code2,Download } from "lucide-react";
 
 export default function Header() {
   const [activeItem, setActiveItem] = useState("ABOUT");
+  const cvPath = "/Anushk_Prakash_CV.pdf";
 
   const navItems = [
     { name: "ABOUT", href: "#about" },
@@ -60,11 +61,15 @@ export default function Header() {
 
         {/* Right Section */}
         <div className="hidden lg:flex flex-1 justify-end h-full">
-          <button className="relative flex items-center justify-center gap-2 border border-white/10 text-white px-6 lg:px-8 rounded-full font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors group overflow-hidden text-sm h-full">
+          <a
+            href={cvPath}
+            download
+            className="relative flex items-center justify-center gap-2 border border-white/10 text-white px-6 lg:px-8 rounded-full font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors group overflow-hidden text-sm h-full"
+          >
             <div className="absolute inset-0 bg-accent/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             <span className="relative z-10">Download CV</span>
             <Download className="w-4 h-4 relative z-10" />
-          </button>
+          </a>
         </div>
       </div>
     </header>
