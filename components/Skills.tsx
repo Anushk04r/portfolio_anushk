@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Code2, Database, Layout, Server, Terminal, Wrench } from "lucide-react";
 import { FaFigma, FaGithub, FaReact, FaPython, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiMongodb, SiNextdotjs } from "react-icons/si";
@@ -47,10 +47,17 @@ export default function Skills() {
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
-  };
+  const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+    } as const,
+  },
+};
 
   return (
     <section id="skills" className="py-24 relative overflow-hidden">
