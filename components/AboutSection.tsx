@@ -5,7 +5,7 @@ import { Download, ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function AboutSection() {
-  const cvPath = "/Anushk_Prakash_CV.pdf";
+  const cvPath = "/CV_Anushk_Prakash.pdf";
 
   const containerVariants: Variants = {
   hidden: { opacity: 0 },

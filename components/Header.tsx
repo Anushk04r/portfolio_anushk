@@ -7,7 +7,7 @@ import { Mail, Code2,Download } from "lucide-react";
 
 export default function Header() {
   const [activeItem, setActiveItem] = useState("ABOUT");
-  const cvPath = "/Anushk_Prakash_CV.pdf";
+  const cvPath = "/CV_Anushk_Prakash.pdf";
 
   const navItems = [
     { name: "ABOUT", href: "#about" },
