@@ -3,9 +3,11 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
-import React from "react";
+import React, { useState } from "react";
 
 export default function ProfileCard() {
+  const [showFallbackAvatar, setShowFallbackAvatar] = useState(false);
+
   const contactInfo = [
     {
       icon: <Mail className="w-5 h-5 text-accent" />,
@@ -70,20 +72,31 @@ export default function ProfileCard() {
           style={{ transform: "translateZ(30px)" }}
           className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden mb-6 bg-gray-800 border-2 border-white/10 flex items-center justify-center shadow-xl"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/40 to-blue-900/40 opacity-50 transition-opacity" />
-          <svg
-            className="w-24 h-24 text-gray-500 relative z-10"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1}
-              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+          {!showFallbackAvatar ? (
+            <img
+              src="/profile.jpg"
+              alt="Anushk Prakash profile photo"
+              className="w-full h-full object-cover relative z-10"
+              onError={() => setShowFallbackAvatar(true)}
             />
-          </svg>
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/40 to-blue-900/40 opacity-50 transition-opacity" />
+              <svg
+                className="w-24 h-24 text-gray-500 relative z-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+            </>
+          )}
         </div>
 
         <h2 
