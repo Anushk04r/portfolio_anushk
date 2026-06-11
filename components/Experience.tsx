@@ -10,8 +10,8 @@ export default function Experience() {
   const experiences = [
     {
       company: "WorkWall",
-      location: "Delhi, India",
-      role: "Software Developer",
+      location: "Noida, UP",
+      role: "Software Engineer",
       date: "Apr 2026 — Present",
       achievements: [
         "Engineered and scaled an event-driven omnichannel notification platform processing 50K+ events/day across WhatsApp, Email and push notifications using Twilio, Firebase, and SendGrid, reducing P95 delivery latency by 60%.",
@@ -21,8 +21,8 @@ export default function Experience() {
     },
     {
       company: "Critical Insights India Pvt. Ltd.",
-      location: "Delhi, India",
-      role: "Software Developer",
+      location: "Okhla, Delhi",
+      role: "SDE",
       date: "Dec 2025 — Mar 2026",
       achievements: [
         "Contributing to enterprise healthcare products in an Agile squad environment using Angular, Spring Boot, and PostgreSQL.",
@@ -33,8 +33,8 @@ export default function Experience() {
     },
     {
       company: "SIS Group Enterprises",
-      location: "Delhi, India",
-      role: "Software Developer Intern",
+      location: "Okhla, Delhi",
+      role: "SDE Intern",
       date: "Jun 2025 — Aug 2025",
       achievements: [
         "Built and deployed 15+ production React components from Figma specifications, integrating REST APIs across AWS S3/EC2 environments in a cross-functional team."
@@ -56,7 +56,7 @@ export default function Experience() {
         <div className="h-1 w-20 bg-accent rounded-full" />
       </motion.div>
 
-      <div className="max-w-5xl mx-auto px-6 relative" onMouseLeave={() => setHoveredIndex(null)}>
+      <div className="max-w-7xl mx-auto px-6 relative" onMouseLeave={() => setHoveredIndex(null)}>
         {/* Timeline line */}
         <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent md:-translate-x-1/2" />
 

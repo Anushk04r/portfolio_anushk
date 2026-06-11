@@ -12,35 +12,34 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <Header />
       
-      {/* Hero / About Section */}
-      <section id="about" className="w-full max-w-7xl mx-auto px-6 pt-32 md:pt-40 pb-16 min-h-[90vh] flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 h-full items-stretch">
-          {/* Left Column: Profile Card */}
-          <div className="lg:col-span-4 h-full">
-            <ProfileCard />
-          </div>
-          
-          {/* Right Column: About Content */}
-          <div className="lg:col-span-8 h-full py-8 lg:py-0">
-            <AboutSection />
-          </div>
+      <div className="w-full px-6 lg:px-12 xl:px-20 pt-32 md:pt-40 pb-16 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+        {/* Left Column: Profile Card (Sticky on desktop) */}
+        <div className="w-full lg:w-[380px] shrink-0 lg:sticky lg:top-40 h-auto">
+          <ProfileCard />
         </div>
-      </section>
+        
+        {/* Right Column: Scrollable Content */}
+        <div className="w-full flex-1 flex flex-col gap-24">
+          <section id="about">
+            <AboutSection />
+          </section>
 
-      <div className="w-full bg-gradient-to-b from-transparent via-black/40 to-transparent">
-        <Skills />
-      </div>
+          <section id="skills">
+            <Skills />
+          </section>
 
-      <div className="w-full">
-        <Experience />
-      </div>
+          <section id="experience">
+            <Experience />
+          </section>
 
-      <div className="w-full bg-gradient-to-b from-transparent via-black/20 to-transparent">
-        <Projects />
-      </div>
+          <section id="projects">
+            <Projects />
+          </section>
 
-      <div className="w-full">
-        <ContactForm />
+          <section id="contact">
+            <ContactForm />
+          </section>
+        </div>
       </div>
 
       <Footer />

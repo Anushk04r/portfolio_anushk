@@ -9,6 +9,10 @@
   --color-accent-glow: var(--accent-glow);
 }
 
+html {
+  font-size: 14px;
+}
+
 :root {
   --background: #050505;
   --foreground: #f4f4f5;

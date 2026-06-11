@@ -56,7 +56,7 @@ export default function ProfileCard() {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="h-full w-full sticky top-32"
+      className="h-full w-full"
     >
       <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
